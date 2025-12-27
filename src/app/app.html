@@ -1,1 +1,21 @@
-<router-outlet></router-outlet>
+<nav class="navbar is-white has-shadow" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" routerLink="/">
+      <strong>Family Space</strong>
+    </a>
+  </div>
+
+  <div class="navbar-menu is-active">
+    <div class="navbar-end">
+      <a class="navbar-item" routerLink="/">Home</a>
+      <a class="navbar-item" routerLink="/login">Login</a>
+      <a class="navbar-item" routerLink="/register">Register</a>
+    </div>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <router-outlet></router-outlet>
+  </div>
+</section>

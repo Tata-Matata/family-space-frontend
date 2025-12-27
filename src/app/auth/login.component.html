@@ -1,7 +1,43 @@
-<h2>Login</h2>
-
-<input placeholder="Email" [(ngModel)]="email" />
-<input placeholder="Password" type="password" [(ngModel)]="password" />
-
-<button (click)="submit()">Login</button>
-<a routerLink="/register">Register</a>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <h2 class="title is-3 has-text-centered">Login</h2>
+        <div class="box">
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+              <input
+                class="input"
+                type="email"
+                placeholder="Enter your email"
+                [(ngModel)]="email"
+                autocomplete="email"
+              />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Password</label>
+            <div class="control">
+              <input
+                class="input"
+                type="password"
+                placeholder="Enter your password"
+                [(ngModel)]="password"
+                autocomplete="current-password"
+              />
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <button class="button is-primary is-fullwidth" (click)="submit()">Login</button>
+            </div>
+          </div>
+        </div>
+        <p class="has-text-centered">
+          <a routerLink="/register">Don't have an account? Register</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

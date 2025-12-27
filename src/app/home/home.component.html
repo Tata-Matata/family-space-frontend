@@ -1,9 +1,20 @@
-<div *ngIf="auth.isAuthenticated(); else loggedOut">
-    <h2>You are logged in</h2>
-    <button (click)="auth.logout()">Logout</button>
+<div class="box">
+  <div *ngIf="auth.isAuthenticated(); else loggedOut">
+    <h2 class="title is-4">You are logged in</h2>
+    <p class="mb-4 has-text-grey">Your session is active.</p>
+
+    <div class="buttons">
+      <button class="button is-danger" (click)="auth.logout()">Logout</button>
+    </div>
   </div>
-  
+
   <ng-template #loggedOut>
-    <h2>Not logged in</h2>
-    <a routerLink="/login">Login</a>
+    <h2 class="title is-4">Not logged in</h2>
+    <p class="mb-4 has-text-grey">Please sign in to continue.</p>
+
+    <div class="buttons">
+      <a class="button is-primary" routerLink="/login">Login</a>
+      <a class="button is-light" routerLink="/register">Create account</a>
+    </div>
   </ng-template>
+</div>
