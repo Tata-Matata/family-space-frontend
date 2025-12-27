@@ -1,0 +1,9 @@
+<div *ngIf="auth.isAuthenticated(); else loggedOut">
+    <h2>You are logged in</h2>
+    <button (click)="auth.logout()">Logout</button>
+  </div>
+  
+  <ng-template #loggedOut>
+    <h2>Not logged in</h2>
+    <a routerLink="/login">Login</a>
+  </ng-template>
